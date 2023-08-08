@@ -1,0 +1,16 @@
+version: "3.0"
+
+services:
+  db:
+    image: postgres:14.1
+    container_name: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./db_data:/var/lib/postgresql/data
+    restart: always
+    environment:
+      POSTGRES_USER: "woojo"
+      POSTGRES_PASSWORD: "asd3398"
+      POSTGRES_DB: "riot"
+
